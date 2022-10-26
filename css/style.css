@@ -105,14 +105,12 @@ section {
   border-bottom: 0.1rem solid var(--main-color);
   padding-bottom: 0.5rem;
 }
-
 .header .icons div {
   color: #fff;
   cursor: pointer;
   font-size: 2.5rem;
   margin-left: 2rem;
   /* background-color: #eee; */
- 
 }
 
 .header .icons div:hover {
@@ -168,6 +166,9 @@ section {
   width: 35rem;
   background: #fff;
   padding: 0 1.5rem;
+}
+.header .cart-items-container a {
+  color: var(--main-color);
 }
 
 .header .cart-items-container.active {
@@ -357,6 +358,9 @@ section {
 .products .box-container .box .content .stars {
   padding: 1.5rem;
 }
+.products .box-container .box .content .stars i {
+  color: yellow !important;
+}
 
 .products .box-container .box .content .stars i {
   font-size: 1.7rem;
@@ -408,7 +412,7 @@ section {
 
 .review .box-container .box .stars i {
   font-size: 1.5rem;
-  color: var(--main-color);
+  color: yellow;
 }
 
 .contact .row {
@@ -591,22 +595,30 @@ section {
   .header .navbar {
     position: absolute;
     top: 100%;
-    right: -100%;
+    right: 0px;
     background: #fff;
     width: 30rem;
     height: calc(100vh - 9.5rem);
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    /* background-color: #0c0c44; */
+    background-color: rgba(0, 0, 0,80%);
+    transition: all .3s ease-in;
   }
 
   .header .navbar.active {
-    right: 0;
+    transform: scaleY(1);
   }
 
   .header .navbar a {
     color: var(--black);
     display: block;
     margin: 1.5rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
     font-size: 2rem;
+    text-align: center;
+    color: #fff;
   }
 
   .header .search-form {
