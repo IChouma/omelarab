@@ -111,6 +111,8 @@ section {
   cursor: pointer;
   font-size: 2.5rem;
   margin-left: 2rem;
+  /* background-color: #eee; */
+ 
 }
 
 .header .icons div:hover {
